@@ -13,14 +13,17 @@ struct ContentView : View {
  
     var body: some View {
         TabbedView(selection: $selection){
-            Text("First View")
+        
+            SearchContentView()
                 .font(.title)
                 .tabItemLabel(Image("first"))
                 .tag(0)
+            
             Text("Second View")
                 .font(.title)
                 .tabItemLabel(Image("second"))
                 .tag(1)
+           
         }
     }
 }
