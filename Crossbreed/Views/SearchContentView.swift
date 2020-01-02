@@ -8,21 +8,13 @@
 
 import SwiftUI
 
-struct SearchContentView : View {
+struct SearchContentView : View {   
     @EnvironmentObject var settings: UserSettings
     
     var body: some View {
         VStack {
             LabelTextField(label: "Search a Strain", placeholder: "(Enter text here)")
-            
-            Button(action: {
-                self.settings.score += 1
-            }) {
-                Text("Increase Score")
-                Text("Score: \(settings.score)")
-            }
-            
-//            Button(label: "Search")
+
         }
     }
 }

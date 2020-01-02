@@ -8,8 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		DF27191A22DC3C6300E8DA39 /* SearchContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF27191922DC3C6300E8DA39 /* SearchContentView.swift */; };
+		DF55662B23BC1A1E007ACFDB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF55662A23BC1A1E007ACFDB /* Models.swift */; };
+		DF7444B823BDA8E2002EBB56 /* UtilityViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7444B723BDA8E2002EBB56 /* UtilityViews.swift */; };
+		DF7444BD23BDF201002EBB56 /* DisplayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7444BC23BDF200002EBB56 /* DisplayListView.swift */; };
+		DF7444BE23BDF201002EBB56 /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7444BB23BDF200002EBB56 /* SearchResultView.swift */; };
 		DF89CE9822E00BD200D2CB8E /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89CE9722E00BD200D2CB8E /* UserSettings.swift */; };
-		DF89CE9A22E00D0F00D2CB8E /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89CE9922E00D0F00D2CB8E /* SearchResultView.swift */; };
+		DFA1CB2023BB38B60087AD8A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA1CB1F23BB38B60087AD8A /* CardView.swift */; };
+		DFA1CB2323BB52570087AD8A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA1CB2223BB52570087AD8A /* SwiftyJSON.swift */; };
+		DFA1CB2B23BB5C0B0087AD8A /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA1CB2A23BB5C0B0087AD8A /* Fetcher.swift */; };
+		DFC7800322E0131A00137AFE /* DisplayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC7800222E0131A00137AFE /* DisplayListView.swift */; };
 		DFF975F922DC212100EE4DBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF975F822DC212100EE4DBF /* AppDelegate.swift */; };
 		DFF975FB22DC212100EE4DBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF975FA22DC212100EE4DBF /* SceneDelegate.swift */; };
 		DFF975FD22DC212100EE4DBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF975FC22DC212100EE4DBF /* ContentView.swift */; };
@@ -40,8 +47,16 @@
 
 /* Begin PBXFileReference section */
 		DF27191922DC3C6300E8DA39 /* SearchContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContentView.swift; sourceTree = "<group>"; };
+		DF55662A23BC1A1E007ACFDB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		DF7444B723BDA8E2002EBB56 /* UtilityViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityViews.swift; sourceTree = "<group>"; };
+		DF7444BA23BDF1F6002EBB56 /* DisplayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayListView.swift; sourceTree = "<group>"; };
+		DF7444BB23BDF200002EBB56 /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
+		DF7444BC23BDF200002EBB56 /* DisplayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DisplayListView.swift; path = ../../../../../../../../System/Volumes/Data/Users/hew/Code/Swift/Projects/Crossbreed/Crossbreed/DisplayListView.swift; sourceTree = "<group>"; };
 		DF89CE9722E00BD200D2CB8E /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserSettings.swift; path = ../../../../../../../System/Volumes/Data/Users/hew/Code/Swift/Projects/Crossbreed/Crossbreed/UserSettings.swift; sourceTree = "<group>"; };
-		DF89CE9922E00D0F00D2CB8E /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchResultView.swift; path = ../../../../../../../System/Volumes/Data/Users/hew/Code/Swift/Projects/Crossbreed/Crossbreed/SearchResultView.swift; sourceTree = "<group>"; };
+		DFA1CB1F23BB38B60087AD8A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		DFA1CB2223BB52570087AD8A /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		DFA1CB2A23BB5C0B0087AD8A /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
+		DFC7800222E0131A00137AFE /* DisplayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DisplayListView.swift; path = ../../../../../../../System/Volumes/Data/Users/hew/Code/Swift/Projects/Crossbreed/Crossbreed/DisplayListView.swift; sourceTree = "<group>"; };
 		DFF975F522DC212100EE4DBF /* Crossbreed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crossbreed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF975F822DC212100EE4DBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFF975FA22DC212100EE4DBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,9 +99,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF7444B923BDF1F5002EBB56 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFF975FC22DC212100EE4DBF /* ContentView.swift */,
+				DF7444BC23BDF200002EBB56 /* DisplayListView.swift */,
+				DF7444BB23BDF200002EBB56 /* SearchResultView.swift */,
+				DFF9762A22DC255500EE4DBF /* LabelTextView.swift */,
+				DF7444B723BDA8E2002EBB56 /* UtilityViews.swift */,
+				DF27191922DC3C6300E8DA39 /* SearchContentView.swift */,
+				DF7444BA23BDF1F6002EBB56 /* DisplayListView.swift */,
+				DFA1CB1F23BB38B60087AD8A /* CardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		DFF975EC22DC212100EE4DBF = {
 			isa = PBXGroup;
 			children = (
+				DFA1CB2223BB52570087AD8A /* SwiftyJSON.swift */,
 				DFF975F722DC212100EE4DBF /* Crossbreed */,
 				DFF9760E22DC212200EE4DBF /* CrossbreedTests */,
 				DFF9761922DC212200EE4DBF /* CrossbreedUITests */,
@@ -107,17 +138,17 @@
 		DFF975F722DC212100EE4DBF /* Crossbreed */ = {
 			isa = PBXGroup;
 			children = (
-				DFF9762A22DC255500EE4DBF /* LabelTextView.swift */,
+				DF7444B923BDF1F5002EBB56 /* Views */,
 				DFF975F822DC212100EE4DBF /* AppDelegate.swift */,
 				DFF975FA22DC212100EE4DBF /* SceneDelegate.swift */,
 				DF89CE9722E00BD200D2CB8E /* UserSettings.swift */,
-				DFF975FC22DC212100EE4DBF /* ContentView.swift */,
-				DF27191922DC3C6300E8DA39 /* SearchContentView.swift */,
-				DF89CE9922E00D0F00D2CB8E /* SearchResultView.swift */,
+				DFA1CB2A23BB5C0B0087AD8A /* Fetcher.swift */,
+				DFC7800222E0131A00137AFE /* DisplayListView.swift */,
 				DFF975FE22DC212200EE4DBF /* Assets.xcassets */,
 				DFF9760322DC212200EE4DBF /* LaunchScreen.storyboard */,
 				DFF9760622DC212200EE4DBF /* Info.plist */,
 				DFF9760022DC212200EE4DBF /* Preview Content */,
+				DF55662A23BC1A1E007ACFDB /* Models.swift */,
 			);
 			path = Crossbreed;
 			sourceTree = "<group>";
@@ -280,10 +311,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF27191A22DC3C6300E8DA39 /* SearchContentView.swift in Sources */,
-				DF89CE9A22E00D0F00D2CB8E /* SearchResultView.swift in Sources */,
+				DFA1CB2B23BB5C0B0087AD8A /* Fetcher.swift in Sources */,
+				DFA1CB2023BB38B60087AD8A /* CardView.swift in Sources */,
+				DF7444BD23BDF201002EBB56 /* DisplayListView.swift in Sources */,
+				DF7444BE23BDF201002EBB56 /* SearchResultView.swift in Sources */,
+				DF55662B23BC1A1E007ACFDB /* Models.swift in Sources */,
+				DFA1CB2323BB52570087AD8A /* SwiftyJSON.swift in Sources */,
+				DF7444B823BDA8E2002EBB56 /* UtilityViews.swift in Sources */,
 				DF89CE9822E00BD200D2CB8E /* UserSettings.swift in Sources */,
 				DFF975F922DC212100EE4DBF /* AppDelegate.swift in Sources */,
 				DFF975FB22DC212100EE4DBF /* SceneDelegate.swift in Sources */,
+				DFC7800322E0131A00137AFE /* DisplayListView.swift in Sources */,
 				DFF975FD22DC212100EE4DBF /* ContentView.swift in Sources */,
 				DFF9762B22DC255500EE4DBF /* LabelTextView.swift in Sources */,
 			);
