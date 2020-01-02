@@ -9,11 +9,11 @@
 import SwiftUI
 
 struct SearchContentView : View {   
-    @EnvironmentObject var settings: UserSettings
+//    @EnvironmentObject var globalState: GlobalState
     
     var body: some View {
         VStack {
-            LabelTextField(label: "Search a Strain", placeholder: "(Enter text here)")
+            SearchField(label: "Search a Strain", placeholder: "(Enter text here)")
 
         }
     }
@@ -22,7 +22,7 @@ struct SearchContentView : View {
 #if DEBUG
 struct SearchContentView_Previews : PreviewProvider {
     static var previews: some View {
-        SearchContentView().environmentObject(UserSettings())
+        SearchContentView().environmentObject(GlobalState())
     }
 }
 #endif

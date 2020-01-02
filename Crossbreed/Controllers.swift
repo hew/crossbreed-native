@@ -10,12 +10,6 @@ import Foundation
 import Combine
 import SwiftUI
 
-class UserSettings: ObservableObject {
-    var willChange = PassthroughSubject<Void, Never>()
-    
-    var score = 0 {
-        willSet {
-            willChange.send(())
-        }
-    }
+class GlobalState: ObservableObject {
+    @Published var searchString = ""
 }

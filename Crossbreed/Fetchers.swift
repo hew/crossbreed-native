@@ -26,24 +26,14 @@ enum FetchError: Error {
             return message
         }
     }
-}   
-
-//func normalizeJSON(data: Data) -> Data? {
-//    guard let stringRepresentation = String(data: data, encoding: .utf8) else { return nil }
-//
-//    let validJSONString = stringRepresentation.dropFirst(6)
-//
-//    return validJSONString.data(using: .utf8)
-//}
+}
 
 class StrainFetcher: ObservableObject {
-    private static let apiUrlString = "https://gist.githubusercontent.com/hew/7be29a306f8329e19ef92618a3a801bd/raw/ef7b0e89d2febd38a94705f72d641d257af071e0/data.json"
-    var willChange = PassthroughSubject<StrainFetcher, Never>()
-    
+//    @EnvironmentObject var globalState: GlobalState
     @Published var state: LoadableState<RawRequest> = .loading
     
     init() {
-        guard let apiUrl = URL(string: StrainFetcher.apiUrlString) else {
+        guard let apiUrl = URL(string: "https://gist.githubusercontent.com/hew/7be29a306f8329e19ef92618a3a801bd/raw/ef7b0e89d2febd38a94705f72d641d257af071e0/data.json") else {
             state = .fetched(.failure(.error("Malformed API URL.")))
             return
         }
@@ -90,13 +80,14 @@ class ImageFetcher: ObservableObject {
 }
 
 struct FetchView: View {
+    
     @ObservedObject var fetcher = StrainFetcher()
     
     private var stateContent: AnyView {
         switch fetcher.state {
         case .loading:
             return AnyView(
-                Text("Initial")
+                ActivityIndicator(style: .medium)
             )
         case .fetched(let result):
             switch result {
@@ -118,10 +109,7 @@ struct FetchView: View {
     }
     
     var body: some View {
-        NavigationView {
-            stateContent
-                .navigationBarTitle(Text("Products"))
-        }
+        stateContent        
     }
     
 }
