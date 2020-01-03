@@ -46,7 +46,7 @@ public struct ConcentricOnboarding : View {
     public var currentPageIndex: Int {
         return currentIndex.value
     }
-
+    
     let radius: Double = 30
     let limit: Double = 15
 
@@ -70,10 +70,11 @@ public struct ConcentricOnboarding : View {
 
     @State var shape = AnyView(Circle())
 
-    public init(pages: [AnyView], bgColors: [Color], duration: Double = 1.0) {
+    public init(pages: [AnyView], bgColors: [Color], duration: Double = 1.0, onComplete: @escaping () -> Void) {
         self.pages = pages
         self.bgColors = bgColors
         self.duration = duration
+        self.didGoToLastPage = onComplete
     }
 
     func viewWillAppear() {

@@ -41,20 +41,21 @@ struct OnboardingPage : View {
 
 struct OnboardingView: View {
     let beep = [
-        AnyView(OnboardingPage(featureTitle: "Search Strains", featureDescription: "")),
-        AnyView(OnboardingPage(featureTitle: "Learn lineage", featureDescription: "")),
-        AnyView(OnboardingPage(featureTitle: "Consume smarter", featureDescription: ""))
+        AnyView(OnboardingPage(featureTitle: "Welcome to Crossbreed!", featureDescription: "Click the circle below to get started")),
+        AnyView(OnboardingPage(featureTitle: "Search Your Strains", featureDescription: "Crossbreed is simple: search your favorite strains and learn about them. That's pretty much it!")),
+        AnyView(OnboardingPage(featureTitle: "Good to Go", featureDescription: "Click exit to get started"))
     ]
     
     let colors = [
         "F38181",
-        "FCE38A",
         "95E1D3",
         "EAFFD0"
         ].map{ Color(hex: $0) }
     
     var body: some View {
-        ConcentricOnboarding(pages: beep, bgColors: colors)
+        ConcentricOnboarding(pages: beep, bgColors: colors, onComplete: {
+            print("beep")
+        })
     }
 }
 
