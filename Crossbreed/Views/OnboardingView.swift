@@ -40,6 +40,9 @@ struct OnboardingPage : View {
 }
 
 struct OnboardingView: View {
+    
+    @EnvironmentObject var globalState: GlobalState
+    
     let beep = [
         AnyView(OnboardingPage(featureTitle: "Welcome to Crossbreed!", featureDescription: "Click the circle below to get started")),
         AnyView(OnboardingPage(featureTitle: "Search Your Strains", featureDescription: "Crossbreed is simple: search your favorite strains and learn about them. That's pretty much it!")),
@@ -54,7 +57,8 @@ struct OnboardingView: View {
     
     var body: some View {
         ConcentricOnboarding(pages: beep, bgColors: colors, onComplete: {
-            print("beep")
+            print("hello?????????")
+            self.globalState.isOnboarded = true
         })
     }
 }
