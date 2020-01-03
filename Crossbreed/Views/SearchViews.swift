@@ -24,8 +24,10 @@ struct SearchField : View {
             }
         )}
         .padding(.horizontal, 15)
+        .textFieldStyle(RoundedBorderTextFieldStyle())
     }
 }
+
 
 #if DEBUG
 struct SearchField_Previews : PreviewProvider {

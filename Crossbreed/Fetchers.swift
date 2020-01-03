@@ -29,11 +29,12 @@ enum FetchError: Error {
 }
 
 class StrainFetcher: ObservableObject {
-//    @EnvironmentObject var globalState: GlobalState
     @Published var state: LoadableState<RawRequest> = .loading
+    private var baseUrl: String = "https://gist.githubusercontent.com/hew/7be29a306f8329e19ef92618a3a801bd/raw/4dc0dd8e1c6605e573497bb8fd50f19d83dc0577/data.json"
     
-    init() {
-        guard let apiUrl = URL(string: "https://gist.githubusercontent.com/hew/7be29a306f8329e19ef92618a3a801bd/raw/ef7b0e89d2febd38a94705f72d641d257af071e0/data.json") else {
+    init(query: String) {
+        print(baseUrl + query)
+        guard let apiUrl = URL(string: "\(baseUrl)") else {
             state = .fetched(.failure(.error("Malformed API URL.")))
             return
         }
@@ -49,13 +50,17 @@ class StrainFetcher: ObservableObject {
                 return
             }
             
-            let r = try! JSONDecoder().decode(RawRequest.self, from: data)
-            
-            print(r)
-            
-            DispatchQueue.main.async {
-                self.state = .fetched(.success(r))
+            do {
+                let r = try JSONDecoder().decode(RawRequest.self, from: data)
+                
+                DispatchQueue.main.async {
+                    self.state = .fetched(.success(r))
+                }
+                
+            } catch {
+                print("ERROR: failed to decode API data")
             }
+            
         }.resume()
     }
 }
@@ -79,9 +84,14 @@ class ImageFetcher: ObservableObject {
     }
 }
 
+
 struct FetchView: View {
     
-    @ObservedObject var fetcher = StrainFetcher()
+    @ObservedObject var fetcher: StrainFetcher
+    
+    init(_ fetcher: StrainFetcher) {
+        self.fetcher = fetcher
+    }
     
     private var stateContent: AnyView {
         switch fetcher.state {
@@ -98,9 +108,11 @@ struct FetchView: View {
             case .success(let resp):
                 let strains = resp.data;
                 return AnyView(
-                    List(strains){strain in
-                        NavigationLink(destination: StrainRow(strain: strain)) {
-                            StrainDetails(strain: strain)
+                    VStack {                        
+                        List(strains){strain in
+                            NavigationLink(destination: StrainRow(strain: strain)) {
+                                StrainDetails(strain: strain)
+                            }
                         }
                     }
                 )
@@ -109,15 +121,15 @@ struct FetchView: View {
     }
     
     var body: some View {
-        stateContent        
+        stateContent.navigationBarTitle("Something")
     }
     
 }
 
 #if DEBUG
-struct FetchView_Previews : PreviewProvider {
-    static var previews: some View {
-        FetchView()
-    }
-}
+//struct FetchView_Previews : PreviewProvider {
+//    static var previews: some View {
+//        FetchView()
+//    }
+//}
 #endif

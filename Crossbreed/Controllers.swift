@@ -10,6 +10,24 @@ import Foundation
 import Combine
 import SwiftUI
 
+enum SearchState {
+    case input
+    case result
+}
+
+class HomeState: ObservableObject {
+    @Published var localState: SearchState = .input
+}
+
 class GlobalState: ObservableObject {
     @Published var searchString = ""
 }
+
+class PersistedState: ObservableObject {
+    @Published var isOnboarded: Bool = UserDefaults.standard.bool(forKey: "isOnboarded") {
+        didSet {
+            UserDefaults.standard.set(self.isOnboarded, forKey: "isOnboarded")
+        }
+    }
+}
+
