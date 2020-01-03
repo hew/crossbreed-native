@@ -47,14 +47,17 @@ struct HomeView : View {
                     .background(Color("gradient1"))
                     .cornerRadius(40)
                     .padding(.horizontal, 20)
-                    FetchView(StrainFetcher(query: globalState.searchString))
+//                    FetchView(StrainFetcher(query: globalState.searchString))
+                    FetchView()
                 }
             )
         }
     }
     
     var body: some View {
-        stateContent
+        NavigationView {
+            stateContent
+        }
     }
 }
 

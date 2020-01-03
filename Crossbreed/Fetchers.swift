@@ -32,8 +32,7 @@ class StrainFetcher: ObservableObject {
     @Published var state: LoadableState<RawRequest> = .loading
     private var baseUrl: String = "https://gist.githubusercontent.com/hew/7be29a306f8329e19ef92618a3a801bd/raw/4dc0dd8e1c6605e573497bb8fd50f19d83dc0577/data.json"
     
-    init(query: String) {
-        print(baseUrl + query)
+    init() {        
         guard let apiUrl = URL(string: "\(baseUrl)") else {
             state = .fetched(.failure(.error("Malformed API URL.")))
             return
@@ -52,6 +51,8 @@ class StrainFetcher: ObservableObject {
             
             do {
                 let r = try JSONDecoder().decode(RawRequest.self, from: data)
+                
+                print(r)
                 
                 DispatchQueue.main.async {
                     self.state = .fetched(.success(r))
@@ -85,46 +86,7 @@ class ImageFetcher: ObservableObject {
 }
 
 
-struct FetchView: View {
-    
-    @ObservedObject var fetcher: StrainFetcher
-    
-    init(_ fetcher: StrainFetcher) {
-        self.fetcher = fetcher
-    }
-    
-    private var stateContent: AnyView {
-        switch fetcher.state {
-        case .loading:
-            return AnyView(
-                ActivityIndicator(style: .medium)
-            )
-        case .fetched(let result):
-            switch result {
-            case .failure(let error):
-                return AnyView(
-                    Text(error.localizedDescription)
-                )
-            case .success(let resp):
-                let strains = resp.data;
-                return AnyView(
-                    VStack {                        
-                        List(strains){strain in
-                            NavigationLink(destination: StrainRow(strain: strain)) {
-                                StrainDetails(strain: strain)
-                            }
-                        }
-                    }
-                )
-            }
-        }
-    }
-    
-    var body: some View {
-        stateContent.navigationBarTitle("Something")
-    }
-    
-}
+
 
 #if DEBUG
 //struct FetchView_Previews : PreviewProvider {

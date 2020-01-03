@@ -19,11 +19,14 @@ class HomeState: ObservableObject {
     @Published var localState: HomeVariants = .input
 }
 
-class GlobalState: ObservableObject {
-    @Published var searchString = ""
+class PersistedState: ObservableObject {
     @Published var isOnboarded: Bool = UserDefaults.standard.bool(forKey: "isOnboarded") {
         didSet {
             UserDefaults.standard.set(self.isOnboarded, forKey: "isOnboarded")
         }
     }
+}
+
+class GlobalState: ObservableObject {
+    @Published var searchString = ""
 }

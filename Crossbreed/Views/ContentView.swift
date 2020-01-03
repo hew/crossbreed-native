@@ -11,24 +11,20 @@ import SwiftUI
 
 struct ContentView : View {
         
-    @EnvironmentObject var globalState: GlobalState
+    @ObservedObject var persistedState = PersistedState()
     
     var body: some View {
-        VStack {
-            Button(action: {
-                self.globalState.isOnboarded.toggle()
-            }) {
-                Text("New Search")
-            }
-            self.globalState.isOnboarded ? AnyView(HomeView()) : AnyView(OnboardingView())
+        VStack {            
+            self.persistedState.isOnboarded ? AnyView(HomeView()) : AnyView(OnboardingView())
         }
     }
 }
 
 #if DEBUG
+var globalState = GlobalState()
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(globalState)
     }
 }
 #endif

@@ -11,7 +11,7 @@
     typealias UINetworkModel = Decodable & Identifiable
 
     struct Genetics: Codable {
-        let names: String
+        let names: [String]
         
         enum GeneticsKeys: String, CodingKey {
             case names
@@ -21,12 +21,9 @@
         init(from decoder: Decoder) throws {
             let container = try decoder.container(keyedBy: GeneticsKeys.self)
             do {
-                self.names = try container.decode(String.self, forKey: .names)
+                self.names = try container.decode(String.self, forKey: .names).components(separatedBy: " x ")
             } catch DecodingError.typeMismatch {
-                // There was something for the "manage_stock" key, but it wasn't a boolean value. Try a string.
-//                if let string = try container.decodeIfPresent(String.self, forKey: .names) {
-                    // Can check for "parent" specifically if you want.
-                    self.names = ""
+                    self.names = []
                 }
             }
                         

@@ -39,31 +39,3 @@ struct LoadableImage: View {
         }
     }
 }
-
-
-struct StrainDetails: View {
-    var strain: Strain
-    
-    var body: some View {
-        VStack {
-            HStack {
-                LoadableImage(with: strain.image).frame(width: 60, height: 60)
-                Text(strain.name)
-                
-            }
-        }
-    }
-}
-
-struct StrainRow: View {
-    var strain: Strain
-    
-    var body: some View {
-        HStack {
-            LoadableImage(with: strain.image).frame(width: 60, height: 60)
-            Text(strain.name)
-                .padding([.horizontal])
-            
-        }
-    }
-}

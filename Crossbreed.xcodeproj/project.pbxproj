@@ -10,6 +10,8 @@
 		DF18C80923BF126A00DD1BF1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18C80823BF126A00DD1BF1 /* OnboardingView.swift */; };
 		DF18C80B23BF172F00DD1BF1 /* ConcentricOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18C80A23BF172F00DD1BF1 /* ConcentricOnboarding.swift */; };
 		DF18C80D23BF2B0900DD1BF1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18C80C23BF2B0900DD1BF1 /* HomeView.swift */; };
+		DF18C80F23BF416000DD1BF1 /* StrainViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18C80E23BF416000DD1BF1 /* StrainViews.swift */; };
+		DF18C81123BF488B00DD1BF1 /* FetchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18C81023BF488B00DD1BF1 /* FetchView.swift */; };
 		DF27191A22DC3C6300E8DA39 /* SearchContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF27191922DC3C6300E8DA39 /* SearchContentView.swift */; };
 		DF55662B23BC1A1E007ACFDB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF55662A23BC1A1E007ACFDB /* Models.swift */; };
 		DF7444B823BDA8E2002EBB56 /* UtilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7444B723BDA8E2002EBB56 /* UtilityView.swift */; };
@@ -50,6 +52,8 @@
 		DF18C80823BF126A00DD1BF1 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		DF18C80A23BF172F00DD1BF1 /* ConcentricOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentricOnboarding.swift; sourceTree = "<group>"; };
 		DF18C80C23BF2B0900DD1BF1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DF18C80E23BF416000DD1BF1 /* StrainViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrainViews.swift; sourceTree = "<group>"; };
+		DF18C81023BF488B00DD1BF1 /* FetchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchView.swift; sourceTree = "<group>"; };
 		DF27191922DC3C6300E8DA39 /* SearchContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContentView.swift; sourceTree = "<group>"; };
 		DF55662A23BC1A1E007ACFDB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		DF7444B723BDA8E2002EBB56 /* UtilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityView.swift; sourceTree = "<group>"; };
@@ -104,10 +108,12 @@
 			isa = PBXGroup;
 			children = (
 				DFF975FC22DC212100EE4DBF /* ContentView.swift */,
+				DF18C81023BF488B00DD1BF1 /* FetchView.swift */,
 				DF18C80C23BF2B0900DD1BF1 /* HomeView.swift */,
 				DF7444BB23BDF200002EBB56 /* SearchResultView.swift */,
 				DFF9762A22DC255500EE4DBF /* SearchViews.swift */,
 				DF7444B723BDA8E2002EBB56 /* UtilityView.swift */,
+				DF18C80E23BF416000DD1BF1 /* StrainViews.swift */,
 				DF27191922DC3C6300E8DA39 /* SearchContentView.swift */,
 				DFA1CB1F23BB38B60087AD8A /* CardView.swift */,
 				DF18C80823BF126A00DD1BF1 /* OnboardingView.swift */,
@@ -311,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF18C81123BF488B00DD1BF1 /* FetchView.swift in Sources */,
 				DF27191A22DC3C6300E8DA39 /* SearchContentView.swift in Sources */,
 				DFA1CB2B23BB5C0B0087AD8A /* Fetchers.swift in Sources */,
 				DF18C80B23BF172F00DD1BF1 /* ConcentricOnboarding.swift in Sources */,
@@ -322,6 +329,7 @@
 				DF7444B823BDA8E2002EBB56 /* UtilityView.swift in Sources */,
 				DF89CE9822E00BD200D2CB8E /* Controllers.swift in Sources */,
 				DFF975F922DC212100EE4DBF /* AppDelegate.swift in Sources */,
+				DF18C80F23BF416000DD1BF1 /* StrainViews.swift in Sources */,
 				DFF975FB22DC212100EE4DBF /* SceneDelegate.swift in Sources */,
 				DFF975FD22DC212100EE4DBF /* ContentView.swift in Sources */,
 				DF18C80923BF126A00DD1BF1 /* OnboardingView.swift in Sources */,
