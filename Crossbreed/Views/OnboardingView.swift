@@ -56,8 +56,7 @@ struct OnboardingView: View {
         ].map{ Color(hex: $0) }
     
     var body: some View {
-        ConcentricOnboarding(pages: beep, bgColors: colors, onComplete: {
-            print("hello?????????")
+        ConcentricOnboarding(pages: beep, bgColors: colors, onComplete: {            
             self.persistedState.isOnboarded = true
         })
     }

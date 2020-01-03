@@ -12,10 +12,8 @@
 		DF18C80D23BF2B0900DD1BF1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18C80C23BF2B0900DD1BF1 /* HomeView.swift */; };
 		DF18C80F23BF416000DD1BF1 /* StrainViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18C80E23BF416000DD1BF1 /* StrainViews.swift */; };
 		DF18C81123BF488B00DD1BF1 /* FetchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18C81023BF488B00DD1BF1 /* FetchView.swift */; };
-		DF27191A22DC3C6300E8DA39 /* SearchContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF27191922DC3C6300E8DA39 /* SearchContentView.swift */; };
 		DF55662B23BC1A1E007ACFDB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF55662A23BC1A1E007ACFDB /* Models.swift */; };
 		DF7444B823BDA8E2002EBB56 /* UtilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7444B723BDA8E2002EBB56 /* UtilityView.swift */; };
-		DF7444BE23BDF201002EBB56 /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7444BB23BDF200002EBB56 /* SearchResultView.swift */; };
 		DF89CE9822E00BD200D2CB8E /* Controllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89CE9722E00BD200D2CB8E /* Controllers.swift */; };
 		DFA1CB2023BB38B60087AD8A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA1CB1F23BB38B60087AD8A /* CardView.swift */; };
 		DFA1CB2323BB52570087AD8A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA1CB2223BB52570087AD8A /* SwiftyJSON.swift */; };
@@ -28,7 +26,6 @@
 		DFF9760522DC212200EE4DBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF9760322DC212200EE4DBF /* LaunchScreen.storyboard */; };
 		DFF9761022DC212200EE4DBF /* CrossbreedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF9760F22DC212200EE4DBF /* CrossbreedTests.swift */; };
 		DFF9761B22DC212200EE4DBF /* CrossbreedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF9761A22DC212200EE4DBF /* CrossbreedUITests.swift */; };
-		DFF9762B22DC255500EE4DBF /* SearchViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF9762A22DC255500EE4DBF /* SearchViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,10 +51,8 @@
 		DF18C80C23BF2B0900DD1BF1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DF18C80E23BF416000DD1BF1 /* StrainViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrainViews.swift; sourceTree = "<group>"; };
 		DF18C81023BF488B00DD1BF1 /* FetchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchView.swift; sourceTree = "<group>"; };
-		DF27191922DC3C6300E8DA39 /* SearchContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContentView.swift; sourceTree = "<group>"; };
 		DF55662A23BC1A1E007ACFDB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		DF7444B723BDA8E2002EBB56 /* UtilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityView.swift; sourceTree = "<group>"; };
-		DF7444BB23BDF200002EBB56 /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
 		DF89CE9722E00BD200D2CB8E /* Controllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Controllers.swift; path = ../../../../../../../System/Volumes/Data/Users/hew/Code/Swift/Projects/Crossbreed/Crossbreed/Controllers.swift; sourceTree = "<group>"; };
 		DFA1CB1F23BB38B60087AD8A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		DFA1CB2223BB52570087AD8A /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -76,7 +71,6 @@
 		DFF9761622DC212200EE4DBF /* CrossbreedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrossbreedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF9761A22DC212200EE4DBF /* CrossbreedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossbreedUITests.swift; sourceTree = "<group>"; };
 		DFF9761C22DC212200EE4DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DFF9762A22DC255500EE4DBF /* SearchViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,11 +104,8 @@
 				DFF975FC22DC212100EE4DBF /* ContentView.swift */,
 				DF18C81023BF488B00DD1BF1 /* FetchView.swift */,
 				DF18C80C23BF2B0900DD1BF1 /* HomeView.swift */,
-				DF7444BB23BDF200002EBB56 /* SearchResultView.swift */,
-				DFF9762A22DC255500EE4DBF /* SearchViews.swift */,
 				DF7444B723BDA8E2002EBB56 /* UtilityView.swift */,
 				DF18C80E23BF416000DD1BF1 /* StrainViews.swift */,
-				DF27191922DC3C6300E8DA39 /* SearchContentView.swift */,
 				DFA1CB1F23BB38B60087AD8A /* CardView.swift */,
 				DF18C80823BF126A00DD1BF1 /* OnboardingView.swift */,
 				DF18C80A23BF172F00DD1BF1 /* ConcentricOnboarding.swift */,
@@ -318,12 +309,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF18C81123BF488B00DD1BF1 /* FetchView.swift in Sources */,
-				DF27191A22DC3C6300E8DA39 /* SearchContentView.swift in Sources */,
 				DFA1CB2B23BB5C0B0087AD8A /* Fetchers.swift in Sources */,
 				DF18C80B23BF172F00DD1BF1 /* ConcentricOnboarding.swift in Sources */,
 				DF18C80D23BF2B0900DD1BF1 /* HomeView.swift in Sources */,
 				DFA1CB2023BB38B60087AD8A /* CardView.swift in Sources */,
-				DF7444BE23BDF201002EBB56 /* SearchResultView.swift in Sources */,
 				DF55662B23BC1A1E007ACFDB /* Models.swift in Sources */,
 				DFA1CB2323BB52570087AD8A /* SwiftyJSON.swift in Sources */,
 				DF7444B823BDA8E2002EBB56 /* UtilityView.swift in Sources */,
@@ -333,7 +322,6 @@
 				DFF975FB22DC212100EE4DBF /* SceneDelegate.swift in Sources */,
 				DFF975FD22DC212100EE4DBF /* ContentView.swift in Sources */,
 				DF18C80923BF126A00DD1BF1 /* OnboardingView.swift in Sources */,
-				DFF9762B22DC255500EE4DBF /* SearchViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

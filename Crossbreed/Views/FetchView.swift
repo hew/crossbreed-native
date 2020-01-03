@@ -33,8 +33,8 @@ struct FetchView: View {
                 return AnyView(
                     VStack {
                         List(strains){strain in
-                            NavigationLink(destination: StrainRow(strain: strain)) {
-                                StrainDetails(strain: strain)
+                            NavigationLink(destination: StrainDetails(strain: strain)) {
+                                StrainRow(strain: strain)
                             }
                         }
                     }
@@ -44,7 +44,8 @@ struct FetchView: View {
     }
     
     var body: some View {
-        stateContent.navigationBarTitle("Results")
+        stateContent
+            .navigationBarTitle("Results", displayMode: .inline)
     }
     
 }

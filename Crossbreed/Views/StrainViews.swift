@@ -10,12 +10,23 @@ import SwiftUI
 
 struct StrainDetails: View {
     var strain: Strain
-    
+        
     var body: some View {
-        VStack {
-            HStack {
-                LoadableImage(with: strain.image).frame(width: 60, height: 60)
-                Text(strain.name)
+        
+        let names = strain.genetics.names;
+        
+        return VStack {
+            LoadableImage(with: strain.image).frame(width: 60, height: 60)
+            Text(strain.name)
+                .padding(.bottom)
+            Text("id: \(strain.ucpc)")
+                .font(.footnote)
+                .foregroundColor(Color("icons"))
+            Spacer()
+            Text("Lineage")
+                .padding(.top)
+            List(names, id: \.self) {gen in
+                Text(gen)
             }
         }
     }

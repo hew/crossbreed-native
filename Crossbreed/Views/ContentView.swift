@@ -16,7 +16,7 @@ struct ContentView : View {
     var body: some View {
         VStack {            
             self.persistedState.isOnboarded ? AnyView(HomeView()) : AnyView(OnboardingView())
-        }
+        }        
     }
 }
 
