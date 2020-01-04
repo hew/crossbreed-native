@@ -42,10 +42,11 @@ public struct ConcentricOnboarding : View {
     public var animationWillBegin = {}
     public var animationDidEnd = {}
     public var didGoToLastPage = {}
+    public var onComplete = {}
     public var didPressNextButton: (()->())? // replaces default button action with user's custom closure
     public var currentPageIndex: Int {
         return currentIndex.value
-    }
+    }    
     
     let radius: Double = 30
     let limit: Double = 15
@@ -120,6 +121,9 @@ public struct ConcentricOnboarding : View {
 
             ZStack {
                 Button(action: {
+                    if self.currentIndex.value == self.pages.count - 1 {
+                        self.onComplete()
+                    }
                     if let block = self.didPressNextButton {
                         block()
                     } else {
@@ -128,10 +132,10 @@ public struct ConcentricOnboarding : View {
                 }) { shape }
 
                 if !isAnimating.value {
-                    Image("arrow")
-                        .resizable()
-                        .frame(width: 7, height: 12)
-                        .foregroundColor(bgColor)
+//                    Image("arrow")
+//                        .resizable()
+//                        .frame(width: 7, height: 12)
+//                        .foregroundColor(bgColor)
                 }
             }
             .offset(y: 300)
@@ -329,9 +333,3 @@ extension Color {
         self.init(red: Double(r) / 0xff, green: Double(g) / 0xff, blue: Double(b) / 0xff)
     }
 }
-
-//struct ConcentricOnboarding_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ConcentricOnboarding()
-//    }
-//}

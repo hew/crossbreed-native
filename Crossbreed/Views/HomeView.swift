@@ -13,13 +13,11 @@ struct HomeView : View {
     @EnvironmentObject var globalState: GlobalState
     
     var body: some View {
-        
             VStack {
                 SearchField(placeholder: "Search Strain")
                 NavigationLink(destination: FetchView() ) {
                     GradientText(text: "Search Now")
                 }
-                
             }
             .navigationBarTitle(Text("Title"))
             .navigationBarItems(trailing:

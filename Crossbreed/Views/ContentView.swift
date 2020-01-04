@@ -8,17 +8,27 @@
 
 import SwiftUI
 
+enum LocalState {
+    case onboarding
+    case main
+}
 
 struct ContentView : View {
     
-    @ObservedObject var persistedState = PersistedState()
+//    @ObservedObject var persistedState = PersistedState()
+    @EnvironmentObject var persistedState: GlobalState
+    
+    private var stateContent: AnyView {
+        switch persistedState.isOnboarded {
+        case true: return AnyView(HomeView())
+        case false: return AnyView(OnboardingView())
+        }
+    }
     
     var body: some View {
         NavigationView {
-            VStack {
-                self.persistedState.isOnboarded ? AnyView(HomeView()) : AnyView(OnboardingView())
-            }
-        }        
+            stateContent            
+        }
     }
 }
 

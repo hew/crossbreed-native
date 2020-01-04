@@ -11,22 +11,23 @@ import Combine
 import SwiftUI
 
 enum HomeVariants {
-    case input
-    case result
+    case onboarding
+    case main
 }
 
 class HomeState: ObservableObject {
-    @Published var localState: HomeVariants = .input
+    @Published var home: HomeVariants = .main
 }
 
-class PersistedState: ObservableObject {
+//class PersistedState: ObservableObject {
+//    
+//}
+
+class GlobalState: ObservableObject {
+    @Published var searchString = ""
     @Published var isOnboarded: Bool = UserDefaults.standard.bool(forKey: "isOnboarded") {
         didSet {
             UserDefaults.standard.set(self.isOnboarded, forKey: "isOnboarded")
         }
     }
-}
-
-class GlobalState: ObservableObject {
-    @Published var searchString = ""
 }
