@@ -97,3 +97,18 @@ struct SearchField : View {
         .textFieldStyle(RoundedBorderTextFieldStyle())
     }
 }
+
+struct ModalView: View {
+    @Binding var showModal: Bool
+    
+    var body: some View {
+        VStack {
+            Text("Inside Modal View")
+                .padding()
+            // 2.
+            Button("Dismiss") {
+                self.showModal.toggle()
+            }
+        }
+    }
+}

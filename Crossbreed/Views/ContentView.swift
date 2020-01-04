@@ -10,12 +10,14 @@ import SwiftUI
 
 
 struct ContentView : View {
-        
+    
     @ObservedObject var persistedState = PersistedState()
     
     var body: some View {
-        VStack {            
-            self.persistedState.isOnboarded ? AnyView(HomeView()) : AnyView(OnboardingView())
+        NavigationView {
+            VStack {
+                self.persistedState.isOnboarded ? AnyView(HomeView()) : AnyView(OnboardingView())
+            }
         }        
     }
 }

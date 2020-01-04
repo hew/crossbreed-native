@@ -13,14 +13,20 @@ struct HomeView : View {
     @EnvironmentObject var globalState: GlobalState
     
     var body: some View {
-        NavigationView {
+        
             VStack {
                 SearchField(placeholder: "Search Strain")
                 NavigationLink(destination: FetchView() ) {
                     GradientText(text: "Search Now")
-                }                
+                }
+                
             }
-        }        
+            .navigationBarTitle(Text("Title"))
+            .navigationBarItems(trailing:
+                NavigationLink(destination: SettingsView()) {
+                    Image(systemName: "ellipsis")
+                }
+            )
     }
 }
 
@@ -31,7 +37,7 @@ struct HomeView_Previews: PreviewProvider {
 }
 
 //    @ObservedObject var homeState = HomeState()
-    
+
 //    private var stateContent: AnyView {
 //        switch homeState.localState {
 //        case .input:
