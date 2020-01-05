@@ -8,19 +8,12 @@
 
 import SwiftUI
 
-
-enum LocalState {
-    case onboarding
-    case main
-}
-
 struct ContentView : View {
     
     @EnvironmentObject var persistedState: PersistedState
-    @EnvironmentObject var searchState: SearchState
     
     private var stateContent: AnyView {
-        switch persistedState.isOnboarded {
+        switch persistedState.isOnboarded {        
         case true: return AnyView(HomeView())
         case false: return AnyView(OnboardingView())
         }

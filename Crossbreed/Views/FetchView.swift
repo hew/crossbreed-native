@@ -45,7 +45,7 @@ struct FetchView: View {
         stateContent
             .navigationBarTitle("Results", displayMode: .inline)        
             .onAppear {
-                self.searchState.fetchData()
+//                self.searchState.fetchData()
         }
     }
     

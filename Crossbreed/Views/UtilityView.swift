@@ -91,6 +91,7 @@ struct SearchField : View {
         VStack {
             TextField(placeholder, text: $query, onEditingChanged: {(changed) in
                 self.searchState.searchString = self.query
+                self.searchState.fetchData()
             })                
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .padding(.horizontal, 20)

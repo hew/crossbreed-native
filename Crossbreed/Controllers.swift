@@ -21,9 +21,11 @@ class SearchState: ObservableObject {
     
     func fetchData() {
         
-        let baseUrl: String = "https://gist.githubusercontent.com/hew/7be29a306f8329e19ef92618a3a801bd/raw/4dc0dd8e1c6605e573497bb8fd50f19d83dc0577/data.json"
+//        let baseUrl: String = "https://gist.githubusercontent.com/hew/7be29a306f8329e19ef92618a3a801bd/raw/4dc0dd8e1c6605e573497bb8fd50f19d83dc0577/data.json"
         
-        guard let apiUrl = URL(string: "\(baseUrl)") else {
+        let baseUrl: String = "http://cannabisreports.com/api/v1.0/strains/search/"
+        
+        guard let apiUrl = URL(string: "\(baseUrl)\(searchString)") else {
             networkState = .fetched(.failure(.error("Malformed API URL.")))
             return
         }
