@@ -10,10 +10,31 @@ import SwiftUI
 
 struct SettingsView: View {
     
+    @State var mapChoice = 0
+    @State var isShowing = true
+    
+    var settings = ["Otreeba", "Coming Soon"]
+    
     var body: some View {
         VStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Text("API")
                 .font(.title)
+                .padding()
+                .padding(.top)
+            Toggle(isOn: self.$isShowing) {
+                Text("Hello World")
+            }
+                .padding(.horizontal, 30)
+            Spacer()
+//            Text("API")
+//                .font(.title)
+//            Picker(selection: self.$mapChoice, label: Text("Strength")) {
+//                ForEach(0 ..< settings.count) { index in
+//                    Text(self.settings[index])
+//                        .tag(index)
+//                }
+//
+//            }.pickerStyle(SegmentedPickerStyle())
         }
         .navigationBarTitle("Settings", displayMode: .inline)
     }
