@@ -83,20 +83,20 @@ struct GradientText: View {
 
 struct SearchField : View {
     @EnvironmentObject var searchState: SearchState
-    @State var query = ""
+//    @State var query = ""
     
     var placeholder: String
     
     var body: some View {
         VStack {
-            TextField(placeholder, text: $query, onEditingChanged: {(changed) in
-                self.searchState.searchString = self.query
-                self.searchState.fetchData()
+            TextField(placeholder, text: self.$searchState.searchString, onEditingChanged: {(changed) in
+                print("typing...")
+//                self.searchState.searchString = self.query
             })                
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .padding(.horizontal, 20)
             .zIndex(1)
-        }
+        }        
     }
 }
 

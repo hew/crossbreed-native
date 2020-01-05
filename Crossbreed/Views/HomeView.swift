@@ -11,28 +11,38 @@ import Combine
 
 struct HomeView : View {
     @EnvironmentObject var searchState: SearchState
+    @State var shouldNavigate = false
+    @State private var showingAlert = false
     
     var body: some View {
         VStack {
-                Spacer()
-                Text("Crossbreed")
-                    .font(AppFont.logo)
-                    .foregroundColor(Color.white)
-                Text("Search your favorite strains.")
-                    .font(AppFont.body)
-                    .foregroundColor(Color.white)
-                    .padding()
-                Spacer()
-                SearchField(placeholder: "Search Strain")
-            NavigationLink(destination: FetchView() ) {
-                    GradientText(text: "Search Now")
+            Spacer()
+            Text("Crossbreed")
+                .font(AppFont.logo)
+                .foregroundColor(Color.white)
+            Text("Search your favorite strains.")
+                .font(AppFont.body)
+                .foregroundColor(Color.white)
+                .padding()
+            Spacer()
+            SearchField(placeholder: "Search Strain")
+            GradientButton(onPress: {
+                if self.searchState.searchString.count <= 1 {
+                    self.showingAlert = true
+                } else {
+                    self.searchState.fetchData()
+                    self.shouldNavigate = true
                 }
-                Spacer()
+            }, buttonText: "Search Now")
+            NavigationLink(destination: FetchView(), isActive: self.$shouldNavigate) {
+                EmptyView()
             }
-            .background(Color("secondary"))
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: Alignment.topLeading)
-            .edgesIgnoringSafeArea(.vertical)
-//            .navigationBarTitle(Text("Search"))
+            Spacer()
+        }
+        .background(Color("secondary"))
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: Alignment.topLeading)
+        .edgesIgnoringSafeArea(.vertical)
+            //            .navigationBarTitle(Text("Search"))
             .navigationBarItems(trailing:
                 NavigationLink(destination: MoreView()) {
                     Image(systemName: "ellipsis")
@@ -40,7 +50,10 @@ struct HomeView : View {
                         .font(.headline)
                         .shadow(color: .gray, radius: 10.0, x: 10, y: 10)
                 }
-            )
+        )
+        .alert(isPresented: self.$showingAlert) {
+            Alert(title: Text("Too Short"), message: Text("Your search must be at least 2 characters long."), dismissButton: .default(Text("Got it!")))
+        }
     }
 }
 
