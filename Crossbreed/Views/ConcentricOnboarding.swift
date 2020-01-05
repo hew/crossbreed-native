@@ -68,7 +68,6 @@ public struct ConcentricOnboarding : View {
     @State var progress: Double = 0
     @State var bgColor = Color.white
     @State var circleColor = Color.white
-
     @State var shape = AnyView(Circle())
 
     public init(pages: [AnyView], bgColors: [Color], duration: Double = 1.0, onComplete: @escaping () -> Void) {
@@ -115,7 +114,7 @@ public struct ConcentricOnboarding : View {
 
 
     public var body: some View {
-
+        
         let mainView = ZStack {
             bgColor
 
@@ -129,7 +128,8 @@ public struct ConcentricOnboarding : View {
                     } else {
                         self.goToNextPageAnimated()
                     }
-                }) { shape }
+                    }) { shape }
+//                    .shadow(color: .gray, radius: 10.0, x: 10, y: 10)
 
                 if !isAnimating.value {
 //                    Image("arrow")

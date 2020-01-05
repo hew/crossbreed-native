@@ -18,8 +18,8 @@ struct OnboardingPage : View {
         VStack(alignment: .center) {
             Image(systemName: iconString)
                 .padding(.bottom)
-                           .font(.largeTitle)
-                           .foregroundColor(Color.red)
+                .font(.system(size: 50))
+                .foregroundColor(Color.white)
             Text(self.featureTitle)
                 .font(Font.custom("AppleGothic Regular", size: 20))
                 .foregroundColor(Color.white)
@@ -58,17 +58,17 @@ struct OnboardingPage : View {
 
 struct OnboardingView: View {
     
-    @EnvironmentObject var persistedState: GlobalState
+    @EnvironmentObject var persistedState: PersistedState
     
     let pages = [
         AnyView(OnboardingPage(featureTitle: "Search Flowers", featureDescription: "Search from a database of over 10,000 different flower strains.", iconString: "magnifyingglass.circle.fill")),
         AnyView(OnboardingPage(featureTitle: "Learn Lineage & More", featureDescription: "Learn about strain lineages and more!", iconString: "lightbulb.fill")),
-        AnyView(OnboardingPage(featureTitle: "That's It", featureDescription: "Click the circle one more time to get started.", iconString: "")),
+        AnyView(OnboardingPage(featureTitle: "That's It", featureDescription: "Click the circle one more time to get started.", iconString: "checkmark.circle.fill")),
         AnyView(EmptyView()),
     ]
     
     let colors = [
-        "F38181",
+        "983351",
         "95E1D3",
         "F38181",
         "FFFFFF",        
@@ -82,9 +82,9 @@ struct OnboardingView: View {
 }
 
 #if DEBUG
-struct OnboardingView_Previews: PreviewProvider {
-    static var previews: some View {
-        OnboardingView().environmentObject(globalState)
-    }
-}
+//struct OnboardingView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        OnboardingView()
+//    }
+//}
 #endif

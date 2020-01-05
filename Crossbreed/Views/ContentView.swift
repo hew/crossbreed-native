@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+
 enum LocalState {
     case onboarding
     case main
@@ -15,8 +16,8 @@ enum LocalState {
 
 struct ContentView : View {
     
-//    @ObservedObject var persistedState = PersistedState()
-    @EnvironmentObject var persistedState: GlobalState
+    @EnvironmentObject var persistedState: PersistedState
+    @EnvironmentObject var searchState: SearchState
     
     private var stateContent: AnyView {
         switch persistedState.isOnboarded {
@@ -27,16 +28,27 @@ struct ContentView : View {
     
     var body: some View {
         NavigationView {
-            stateContent            
+            stateContent
+            .background(NavigationConfigurator { nc in
+                nc.navigationBar.barTintColor = UIColor(red:0.25, green:0.55, blue:0.18, alpha:1.0)
+                nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
+                nc.navigationBar.tintColor = UIColor.white
+            })
         }
+//        .accentColor(Color("primary"))
+        .navigationViewStyle(StackNavigationViewStyle())
     }
+    
 }
 
 #if DEBUG
-var globalState = GlobalState()
+var searchState = SearchState()
+var persistedState = PersistedState()
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView().environmentObject(globalState)
+        ContentView()
+            .environmentObject(searchState)
+            .environmentObject(persistedState)
     }
 }
 #endif

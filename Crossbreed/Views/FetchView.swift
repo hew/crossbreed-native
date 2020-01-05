@@ -10,14 +10,10 @@ import SwiftUI
 
 struct FetchView: View {
     
-    @ObservedObject var fetcher = StrainFetcher()
-    
-//    init(_ fetcher: StrainFetcher) {
-//        self.fetcher = fetcher
-//    }
+    @EnvironmentObject var searchState: SearchState
     
     private var stateContent: AnyView {
-        switch fetcher.state {
+        switch searchState.networkState {
         case .loading:
             return AnyView(
                 ActivityIndicator(style: .medium)
@@ -37,6 +33,7 @@ struct FetchView: View {
                                 StrainRow(strain: strain)
                             }
                         }
+                        .padding(.top)
                     }
                 )
             }
@@ -45,13 +42,16 @@ struct FetchView: View {
     
     var body: some View {
         stateContent
-            .navigationBarTitle("Results", displayMode: .inline)
+            .navigationBarTitle("Results", displayMode: .inline)        
+            .onAppear {
+                self.searchState.fetchData()
+        }
     }
     
 }
 
-struct FetchView_Previews: PreviewProvider {
-    static var previews: some View {
-        FetchView()
-    }
-}
+//struct FetchView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FetchView()
+//    }
+//}

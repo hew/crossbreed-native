@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF0AF3E023C1530500F31E90 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0AF3DF23C1530500F31E90 /* Configuration.swift */; };
 		DF18C80923BF126A00DD1BF1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18C80823BF126A00DD1BF1 /* OnboardingView.swift */; };
 		DF18C80B23BF172F00DD1BF1 /* ConcentricOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18C80A23BF172F00DD1BF1 /* ConcentricOnboarding.swift */; };
 		DF18C80D23BF2B0900DD1BF1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18C80C23BF2B0900DD1BF1 /* HomeView.swift */; };
@@ -18,7 +19,6 @@
 		DF89CE9822E00BD200D2CB8E /* Controllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89CE9722E00BD200D2CB8E /* Controllers.swift */; };
 		DFA1CB2023BB38B60087AD8A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA1CB1F23BB38B60087AD8A /* CardView.swift */; };
 		DFA1CB2323BB52570087AD8A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA1CB2223BB52570087AD8A /* SwiftyJSON.swift */; };
-		DFA1CB2B23BB5C0B0087AD8A /* Fetchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA1CB2A23BB5C0B0087AD8A /* Fetchers.swift */; };
 		DFF975F922DC212100EE4DBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF975F822DC212100EE4DBF /* AppDelegate.swift */; };
 		DFF975FB22DC212100EE4DBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF975FA22DC212100EE4DBF /* SceneDelegate.swift */; };
 		DFF975FD22DC212100EE4DBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF975FC22DC212100EE4DBF /* ContentView.swift */; };
@@ -47,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF0AF3DF23C1530500F31E90 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		DF18C80823BF126A00DD1BF1 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		DF18C80A23BF172F00DD1BF1 /* ConcentricOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentricOnboarding.swift; sourceTree = "<group>"; };
 		DF18C80C23BF2B0900DD1BF1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -58,7 +59,6 @@
 		DF89CE9722E00BD200D2CB8E /* Controllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Controllers.swift; path = ../../../../../../../System/Volumes/Data/Users/hew/Code/Swift/Projects/Crossbreed/Crossbreed/Controllers.swift; sourceTree = "<group>"; };
 		DFA1CB1F23BB38B60087AD8A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		DFA1CB2223BB52570087AD8A /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		DFA1CB2A23BB5C0B0087AD8A /* Fetchers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetchers.swift; sourceTree = "<group>"; };
 		DFF975F522DC212100EE4DBF /* Crossbreed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crossbreed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF975F822DC212100EE4DBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFF975FA22DC212100EE4DBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 				DFF975F822DC212100EE4DBF /* AppDelegate.swift */,
 				DFF975FA22DC212100EE4DBF /* SceneDelegate.swift */,
 				DF89CE9722E00BD200D2CB8E /* Controllers.swift */,
-				DFA1CB2A23BB5C0B0087AD8A /* Fetchers.swift */,
+				DF0AF3DF23C1530500F31E90 /* Configuration.swift */,
 				DFF975FE22DC212200EE4DBF /* Assets.xcassets */,
 				DFF9760322DC212200EE4DBF /* LaunchScreen.storyboard */,
 				DFF9760622DC212200EE4DBF /* Info.plist */,
@@ -313,10 +313,10 @@
 			files = (
 				DF18C81323C068F900DD1BF1 /* SettingsView.swift in Sources */,
 				DF18C81123BF488B00DD1BF1 /* FetchView.swift in Sources */,
-				DFA1CB2B23BB5C0B0087AD8A /* Fetchers.swift in Sources */,
 				DF18C80B23BF172F00DD1BF1 /* ConcentricOnboarding.swift in Sources */,
 				DF18C80D23BF2B0900DD1BF1 /* HomeView.swift in Sources */,
 				DFA1CB2023BB38B60087AD8A /* CardView.swift in Sources */,
+				DF0AF3E023C1530500F31E90 /* Configuration.swift in Sources */,
 				DF55662B23BC1A1E007ACFDB /* Models.swift in Sources */,
 				DFA1CB2323BB52570087AD8A /* SwiftyJSON.swift in Sources */,
 				DF7444B823BDA8E2002EBB56 /* UtilityView.swift in Sources */,

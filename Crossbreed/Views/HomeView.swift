@@ -10,19 +10,27 @@ import SwiftUI
 import Combine
 
 struct HomeView : View {
-    @EnvironmentObject var globalState: GlobalState
+    @EnvironmentObject var searchState: SearchState
     
     var body: some View {
-            VStack {
+        VStack {
+                Spacer()
                 SearchField(placeholder: "Search Strain")
-                NavigationLink(destination: FetchView() ) {
+            NavigationLink(destination: FetchView() ) {
                     GradientText(text: "Search Now")
                 }
+                Spacer()
             }
-            .navigationBarTitle(Text("Title"))
+            .background(Color("secondary"))
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: Alignment.topLeading)
+            .edgesIgnoringSafeArea(.vertical)
+//            .navigationBarTitle(Text("Search"))
             .navigationBarItems(trailing:
                 NavigationLink(destination: SettingsView()) {
                     Image(systemName: "ellipsis")
+                        .foregroundColor(Color(.white))
+                        .font(.headline)
+                        .shadow(color: .gray, radius: 10.0, x: 10, y: 10)
                 }
             )
     }

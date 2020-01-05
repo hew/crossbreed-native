@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+
 struct ActivityIndicator: UIViewRepresentable {
     let style: UIActivityIndicatorView.Style
     
@@ -54,10 +55,10 @@ struct GradientButton: View {
         .frame(minWidth: 0, maxWidth: .infinity)
         .padding()
         .foregroundColor(.white)
-        .background(LinearGradient(gradient: Gradient(colors: [Color("gradient2"), Color("gradient1")]), startPoint: .leading, endPoint: .trailing))
+        .background(LinearGradient(gradient: Gradient(colors: [Color("secondaryLight"), Color("secondaryLight")]), startPoint: .leading, endPoint: .trailing))
         .cornerRadius(40)
         .padding([.top, .leading, .trailing], 20)
-        .shadow(color: .gray, radius: 10.0, x: 10, y: 10)
+        .shadow(color: Color("secondaryDark"), radius: 10.0, x: 10, y: 10)
     }
 }
 
@@ -67,34 +68,33 @@ struct GradientText: View {
     
     var body: some View {
         Text(text)
-        .frame(minWidth: 0, maxWidth: .infinity)
-        .padding()
-        .foregroundColor(.white)
-        .background(LinearGradient(gradient: Gradient(colors: [Color("gradient2"), Color("gradient1")]), startPoint: .leading, endPoint: .trailing))
-        .cornerRadius(40)
-        .padding([.top, .leading, .trailing], 20)
-        .shadow(color: .gray, radius: 10.0, x: 10, y: 10)
+            .bold()
+            .frame(minWidth: 0, maxWidth: .infinity)
+            .padding()
+            .foregroundColor(.white)
+            .background(LinearGradient(gradient: Gradient(colors: [Color("secondaryLight"), Color("secondaryLight")]), startPoint: .leading, endPoint: .trailing))
+            .cornerRadius(40)
+            .padding([.top, .leading, .trailing], 20)
+            .shadow(color: Color("secondaryDark"), radius: 10.0, x: 10, y: 10)
     }
 }
 
 
 struct SearchField : View {
-    @EnvironmentObject var globalState: GlobalState
+    @EnvironmentObject var searchState: SearchState
     @State var query = ""
     
-//    var label: String
     var placeholder: String
     
     var body: some View {
-        
         VStack {
-//            Text(label)
             TextField(placeholder, text: $query, onEditingChanged: {(changed) in
-                self.globalState.searchString = self.query
-            }
-        )}
-        .padding(.horizontal, 15)
-        .textFieldStyle(RoundedBorderTextFieldStyle())
+                self.searchState.searchString = self.query
+            })                
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            .padding(.horizontal, 20)
+            .zIndex(1)
+        }
     }
 }
 
@@ -110,5 +110,11 @@ struct ModalView: View {
                 self.showModal.toggle()
             }
         }
+    }
+}
+
+struct Utility_Previews: PreviewProvider {
+    static var previews: some View {
+        SearchField(placeholder: "beep")
     }
 }
