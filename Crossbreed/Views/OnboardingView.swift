@@ -21,12 +21,12 @@ struct OnboardingPage : View {
                 .font(.system(size: 50))
                 .foregroundColor(Color.white)
             Text(self.featureTitle)
-                .font(Font.custom("AppleGothic Regular", size: 20))
+                .font(AppFont.title)
                 .foregroundColor(Color.white)
                 .bold()
                 .padding(.vertical)
             Text(self.featureDescription)
-                .font(Font.custom("Poppins-Regular", size: 16))
+                .font(AppFont.body)
                 .foregroundColor(Color.white)
                 .multilineTextAlignment(.center)
                 .padding(.bottom, 42)
@@ -36,25 +36,6 @@ struct OnboardingPage : View {
         .padding(.trailing, 36)
     }
 }
-
-//struct OnboardingPageLast : View {
-//
-//    @EnvironmentObject var persistedState: GlobalState
-//
-//    var featureTitle: String
-//    var featureDescription: String
-//    var iconString: String = "magnifyingglass.circle.fill"
-//
-//    var body: some View {
-//        VStack(alignment: .center) {
-//            GradientButton(onPress: {
-//                self.persistedState.isOnboarded = false
-//            }, buttonText: "Start Searching")
-//        }
-//        .padding(.leading, 36)
-//        .padding(.trailing, 36)
-//    }
-//}
 
 struct OnboardingView: View {
     
@@ -68,9 +49,13 @@ struct OnboardingView: View {
     ]
     
     let colors = [
+        // primary dark
+        "711330",
+        // primary
         "983351",
-        "95E1D3",
-        "F38181",
+        // primary light
+        "BE5F7B",
+        // Final (white)
         "FFFFFF",        
         ].map{ Color(hex: $0) }
     
@@ -82,9 +67,9 @@ struct OnboardingView: View {
 }
 
 #if DEBUG
-//struct OnboardingView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        OnboardingView()
-//    }
-//}
+struct OnboardingView_Previews: PreviewProvider {
+    static var previews: some View {
+        OnboardingView()
+    }
+}
 #endif

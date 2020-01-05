@@ -23,6 +23,7 @@ struct FetchView: View {
             case .failure(let error):
                 return AnyView(
                     Text(error.localizedDescription)
+                        .font(AppFont.body)
                 )
             case .success(let resp):
                 let strains = resp.data;

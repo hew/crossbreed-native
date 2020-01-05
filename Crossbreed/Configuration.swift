@@ -51,3 +51,9 @@ extension Color {
         return UIColor(red: 1, green: 1, blue: 1, alpha: 1)
     }
 }
+
+struct AppFont {
+  static let logo = Font.custom("GillSans-SemiBold", size: 42.0)
+  static let title = Font.custom("GillSans-SemiBold", size: 24.0)
+  static let body = Font.custom("GillSans", size: 14.0)
+}

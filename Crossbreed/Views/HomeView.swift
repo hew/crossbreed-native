@@ -15,6 +15,14 @@ struct HomeView : View {
     var body: some View {
         VStack {
                 Spacer()
+                Text("Crossbreed")
+                    .font(AppFont.logo)
+                    .foregroundColor(Color.white)
+                Text("Search your favorite strains.")
+                    .font(AppFont.body)
+                    .foregroundColor(Color.white)
+                    .padding()
+                Spacer()
                 SearchField(placeholder: "Search Strain")
             NavigationLink(destination: FetchView() ) {
                     GradientText(text: "Search Now")

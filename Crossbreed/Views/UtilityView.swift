@@ -51,6 +51,7 @@ struct GradientButton: View {
             self.onPress()
         }) {
             Text(buttonText)
+                .font(AppFont.body)
         }
         .frame(minWidth: 0, maxWidth: .infinity)
         .padding()
