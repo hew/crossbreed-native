@@ -13,7 +13,7 @@
 		DF18C80D23BF2B0900DD1BF1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18C80C23BF2B0900DD1BF1 /* HomeView.swift */; };
 		DF18C80F23BF416000DD1BF1 /* StrainViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18C80E23BF416000DD1BF1 /* StrainViews.swift */; };
 		DF18C81123BF488B00DD1BF1 /* FetchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18C81023BF488B00DD1BF1 /* FetchView.swift */; };
-		DF18C81323C068F900DD1BF1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18C81223C068F900DD1BF1 /* SettingsView.swift */; };
+		DF18C81323C068F900DD1BF1 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18C81223C068F900DD1BF1 /* MoreView.swift */; };
 		DF55662B23BC1A1E007ACFDB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF55662A23BC1A1E007ACFDB /* Models.swift */; };
 		DF7444B823BDA8E2002EBB56 /* UtilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7444B723BDA8E2002EBB56 /* UtilityView.swift */; };
 		DF89CE9822E00BD200D2CB8E /* Controllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89CE9722E00BD200D2CB8E /* Controllers.swift */; };
@@ -53,7 +53,7 @@
 		DF18C80C23BF2B0900DD1BF1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DF18C80E23BF416000DD1BF1 /* StrainViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrainViews.swift; sourceTree = "<group>"; };
 		DF18C81023BF488B00DD1BF1 /* FetchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchView.swift; sourceTree = "<group>"; };
-		DF18C81223C068F900DD1BF1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DF18C81223C068F900DD1BF1 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
 		DF55662A23BC1A1E007ACFDB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		DF7444B723BDA8E2002EBB56 /* UtilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityView.swift; sourceTree = "<group>"; };
 		DF89CE9722E00BD200D2CB8E /* Controllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Controllers.swift; path = ../../../../../../../System/Volumes/Data/Users/hew/Code/Swift/Projects/Crossbreed/Crossbreed/Controllers.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 				DFF975FC22DC212100EE4DBF /* ContentView.swift */,
 				DF18C81023BF488B00DD1BF1 /* FetchView.swift */,
 				DF18C80C23BF2B0900DD1BF1 /* HomeView.swift */,
-				DF18C81223C068F900DD1BF1 /* SettingsView.swift */,
+				DF18C81223C068F900DD1BF1 /* MoreView.swift */,
 				DF7444B723BDA8E2002EBB56 /* UtilityView.swift */,
 				DF18C80E23BF416000DD1BF1 /* StrainViews.swift */,
 				DFA1CB1F23BB38B60087AD8A /* CardView.swift */,
@@ -311,7 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF18C81323C068F900DD1BF1 /* SettingsView.swift in Sources */,
+				DF18C81323C068F900DD1BF1 /* MoreView.swift in Sources */,
 				DF18C81123BF488B00DD1BF1 /* FetchView.swift in Sources */,
 				DF18C80B23BF172F00DD1BF1 /* ConcentricOnboarding.swift in Sources */,
 				DF18C80D23BF2B0900DD1BF1 /* HomeView.swift in Sources */,

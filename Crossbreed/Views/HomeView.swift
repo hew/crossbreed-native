@@ -34,7 +34,7 @@ struct HomeView : View {
             .edgesIgnoringSafeArea(.vertical)
 //            .navigationBarTitle(Text("Search"))
             .navigationBarItems(trailing:
-                NavigationLink(destination: SettingsView()) {
+                NavigationLink(destination: MoreView()) {
                     Image(systemName: "ellipsis")
                         .foregroundColor(Color(.white))
                         .font(.headline)
