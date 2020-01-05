@@ -145,11 +145,11 @@
 				DFF975FA22DC212100EE4DBF /* SceneDelegate.swift */,
 				DF89CE9722E00BD200D2CB8E /* Controllers.swift */,
 				DF0AF3DF23C1530500F31E90 /* Configuration.swift */,
+				DF55662A23BC1A1E007ACFDB /* Models.swift */,
 				DFF975FE22DC212200EE4DBF /* Assets.xcassets */,
 				DFF9760322DC212200EE4DBF /* LaunchScreen.storyboard */,
 				DFF9760622DC212200EE4DBF /* Info.plist */,
 				DFF9760022DC212200EE4DBF /* Preview Content */,
-				DF55662A23BC1A1E007ACFDB /* Models.swift */,
 			);
 			path = Crossbreed;
 			sourceTree = "<group>";
