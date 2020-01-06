@@ -17,15 +17,12 @@ struct OnboardingPage : View {
     
     var body: some View {
         VStack(alignment: .center) {
-            Text("Crossbreed")
-            .font(AppFont.logo)
-            .foregroundColor(Color.white)
-            .bold()
-            .padding(.vertical)
-            Image(systemName: iconString)
-                .padding(.bottom)
-                .font(.system(size: 50))
-                .foregroundColor(Color.white)
+            Image("logo")
+                .resizable()
+                .frame(width: 125, height: 100)
+            Text("\(pageNumber)/2")
+                .padding()
+                .foregroundColor(.white)
             Text(self.featureTitle)
                 .font(AppFont.title)
                 .foregroundColor(Color.white)
@@ -36,9 +33,6 @@ struct OnboardingPage : View {
                 .foregroundColor(Color.white)
                 .multilineTextAlignment(.center)
                 .padding(.bottom, 42)
-//            Text("\(pageNumber)/3")
-//                           .padding()
-//                           .foregroundColor(.white)
             
         }
         .padding(.leading, 36)
@@ -53,7 +47,7 @@ struct OnboardingView: View {
     let pages = [
         AnyView(OnboardingPage(
             featureTitle: "Search Strains",
-            featureDescription: "Search from a database of over 10,000 different strains.",
+            featureDescription: "Crossbreed lets you search from a database of over 10,000 different strains.",
             iconString: "magnifyingglass.circle.fill",
             pageNumber: "1"
             )
@@ -65,13 +59,6 @@ struct OnboardingView: View {
             pageNumber: "2"
             )
         ),
-//        AnyView(OnboardingPage(
-//            featureTitle: "That's It",
-//            featureDescription: "Click the circle one more time to get started.",
-//            iconString: "checkmark.circle.fill",
-//            pageNumber: "3"
-//            )
-//        ),
         AnyView(EmptyView()),
     ]
     
@@ -80,8 +67,6 @@ struct OnboardingView: View {
         "711330",
         // primary
         "983351",
-        // primary light
-//        "BE5F7B",
         // Final (white)
         "FFFFFF",        
         ].map{ Color(hex: $0) }

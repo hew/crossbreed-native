@@ -19,10 +19,11 @@
 		DF89CE9822E00BD200D2CB8E /* Controllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89CE9722E00BD200D2CB8E /* Controllers.swift */; };
 		DFA1CB2023BB38B60087AD8A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA1CB1F23BB38B60087AD8A /* CardView.swift */; };
 		DFA1CB2323BB52570087AD8A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA1CB2223BB52570087AD8A /* SwiftyJSON.swift */; };
+		DFB10E2423C32BC90069BE28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFB10E2323C32BC90069BE28 /* Assets.xcassets */; };
+		DFB3E8EE23C3202C00E49EAE /* PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB3E8ED23C3202C00E49EAE /* PrivacyView.swift */; };
 		DFF975F922DC212100EE4DBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF975F822DC212100EE4DBF /* AppDelegate.swift */; };
 		DFF975FB22DC212100EE4DBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF975FA22DC212100EE4DBF /* SceneDelegate.swift */; };
 		DFF975FD22DC212100EE4DBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF975FC22DC212100EE4DBF /* ContentView.swift */; };
-		DFF975FF22DC212200EE4DBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF975FE22DC212200EE4DBF /* Assets.xcassets */; };
 		DFF9760222DC212200EE4DBF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF9760122DC212200EE4DBF /* Preview Assets.xcassets */; };
 		DFF9760522DC212200EE4DBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF9760322DC212200EE4DBF /* LaunchScreen.storyboard */; };
 		DFF9761022DC212200EE4DBF /* CrossbreedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF9760F22DC212200EE4DBF /* CrossbreedTests.swift */; };
@@ -59,11 +60,12 @@
 		DF89CE9722E00BD200D2CB8E /* Controllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Controllers.swift; path = ../../../../../../../System/Volumes/Data/Users/hew/Code/Swift/Projects/Crossbreed/Crossbreed/Controllers.swift; sourceTree = "<group>"; };
 		DFA1CB1F23BB38B60087AD8A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		DFA1CB2223BB52570087AD8A /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		DFB10E2323C32BC90069BE28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DFB3E8ED23C3202C00E49EAE /* PrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyView.swift; sourceTree = "<group>"; };
 		DFF975F522DC212100EE4DBF /* Crossbreed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crossbreed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF975F822DC212100EE4DBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFF975FA22DC212100EE4DBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DFF975FC22DC212100EE4DBF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		DFF975FE22DC212200EE4DBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFF9760122DC212200EE4DBF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DFF9760422DC212200EE4DBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFF9760622DC212200EE4DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				DF18C81023BF488B00DD1BF1 /* FetchView.swift */,
 				DF18C80C23BF2B0900DD1BF1 /* HomeView.swift */,
 				DF18C81223C068F900DD1BF1 /* MoreView.swift */,
+				DFB3E8ED23C3202C00E49EAE /* PrivacyView.swift */,
 				DF7444B723BDA8E2002EBB56 /* UtilityView.swift */,
 				DF18C80E23BF416000DD1BF1 /* StrainViews.swift */,
 				DFA1CB1F23BB38B60087AD8A /* CardView.swift */,
@@ -140,13 +143,13 @@
 		DFF975F722DC212100EE4DBF /* Crossbreed */ = {
 			isa = PBXGroup;
 			children = (
+				DFB10E2323C32BC90069BE28 /* Assets.xcassets */,
 				DF7444B923BDF1F5002EBB56 /* Views */,
 				DFF975F822DC212100EE4DBF /* AppDelegate.swift */,
 				DFF975FA22DC212100EE4DBF /* SceneDelegate.swift */,
 				DF89CE9722E00BD200D2CB8E /* Controllers.swift */,
 				DF0AF3DF23C1530500F31E90 /* Configuration.swift */,
 				DF55662A23BC1A1E007ACFDB /* Models.swift */,
-				DFF975FE22DC212200EE4DBF /* Assets.xcassets */,
 				DFF9760322DC212200EE4DBF /* LaunchScreen.storyboard */,
 				DFF9760622DC212200EE4DBF /* Info.plist */,
 				DFF9760022DC212200EE4DBF /* Preview Content */,
@@ -285,8 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFF9760522DC212200EE4DBF /* LaunchScreen.storyboard in Resources */,
+				DFB10E2423C32BC90069BE28 /* Assets.xcassets in Resources */,
 				DFF9760222DC212200EE4DBF /* Preview Assets.xcassets in Resources */,
-				DFF975FF22DC212200EE4DBF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +319,7 @@
 				DF18C80B23BF172F00DD1BF1 /* ConcentricOnboarding.swift in Sources */,
 				DF18C80D23BF2B0900DD1BF1 /* HomeView.swift in Sources */,
 				DFA1CB2023BB38B60087AD8A /* CardView.swift in Sources */,
+				DFB3E8EE23C3202C00E49EAE /* PrivacyView.swift in Sources */,
 				DF0AF3E023C1530500F31E90 /* Configuration.swift in Sources */,
 				DF55662B23BC1A1E007ACFDB /* Models.swift in Sources */,
 				DFA1CB2323BB52570087AD8A /* SwiftyJSON.swift in Sources */,
