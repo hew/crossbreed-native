@@ -15,6 +15,14 @@ struct MoreView: View {
     
     var body: some View {
         VStack {
+            Text("About")
+            .font(AppFont.title)
+            .padding()
+            .padding(.top)
+            Text("Crossbreed was designed and built in Vancouver, BC.")
+                .font(AppFont.body)
+                .padding()
+                .padding(.top)
             Text("Legal")
                 .font(AppFont.title)
                 .padding()
@@ -22,7 +30,7 @@ struct MoreView: View {
             Button(action: {
                 self.isShowing = true
             }) {
-                Text("View Terms of Use")
+                Text("View Privacy Policy")
             }
             .padding()
             .foregroundColor(Color("primary"))

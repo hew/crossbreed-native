@@ -27,16 +27,24 @@ struct FetchView: View {
                 )
             case .success(let resp):
                 let strains = resp.data;
-                return AnyView(
-                    VStack {
-                        List(strains){strain in
-                            NavigationLink(destination: StrainDetails(strain: strain)) {
-                                StrainRow(strain: strain)
+                
+                if strains.count == 0 {
+                    return AnyView(
+                        Text("No strains matched your search.")
+                    )
+                }
+                else {
+                    return AnyView(
+                        VStack {
+                            List(strains){strain in
+                                NavigationLink(destination: StrainDetails(strain: strain)) {
+                                    StrainRow(strain: strain)
+                                }
                             }
+                            .padding(.top)
                         }
-                        .padding(.top)
-                    }
-                )
+                    )
+                }
             }
         }
     }
