@@ -47,8 +47,7 @@ struct HomeView : View {
         }
         .background(Color("secondary"))
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: Alignment.topLeading)
-        .edgesIgnoringSafeArea(.vertical)
-            //            .navigationBarTitle(Text("Search"))
+        .edgesIgnoringSafeArea(.vertical)            
             .navigationBarItems(trailing:
                 NavigationLink(destination: MoreView()) {
                     Image(systemName: "ellipsis")

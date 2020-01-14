@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct StrainDetails: View {
+    private let kHeaderHeight: CGFloat = 300
     var strain: Strain
     
     var body: some View {
@@ -16,27 +17,31 @@ struct StrainDetails: View {
         let names = strain.genetics.names;
         
         return VStack {
-            DetailsImage(with: strain.image)                
-            Text(strain.name)
-                .bold()
-                .font(AppFont.title)
-                .padding(.vertical)
-            Text("\(strain.seedCompany.name ?? "Unknown Seed Company")")
-                .font(AppFont.body)
-                .padding(.bottom)
-            Text("\(strain.ucpc)")
-               .font(.footnote)
-               .foregroundColor(Color("icons"))
-               .padding(.bottom)
-            Text("Strain Genetics:")
-                .font(AppFont.title)
-            List {
-            ForEach(names, id: \.self) {gen in
-                Text(gen)
-                    .font(AppFont.genetics)
-                    .foregroundColor(Color("secondary"))
-                    .padding(.vertical)
+            VStack {
+                DetailsImage(with: self.strain.image)                
             }
+            VStack{
+                Text(strain.name)
+                    .bold()
+                    .font(AppFont.title)
+                    .padding()
+                Text("\(strain.seedCompany.name ?? "Unknown Seed Company")")
+                    .font(AppFont.body)
+                    .padding(.bottom)
+                Text("\(strain.ucpc)")
+                    .font(.footnote)
+                    .foregroundColor(Color("icons"))
+                    .padding(.bottom)
+                Text("Strain Genetics:")
+                    .font(AppFont.title)
+                List {
+                    ForEach(names, id: \.self) {gen in
+                        Text(gen)
+                            .font(AppFont.genetics)
+                            .foregroundColor(Color("secondary"))
+                            .padding(.vertical)
+                    }
+                }
             }
             Spacer()
         }
@@ -48,7 +53,7 @@ struct StrainRow: View {
     
     var body: some View {
         HStack {
-            ResultsImage(with: strain.image)                
+            ResultsImage(with: strain.image)
             Text(strain.name)
                 .fontWeight(.medium)
                 .padding([.horizontal])

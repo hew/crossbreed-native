@@ -52,18 +52,22 @@ struct DetailsImage: View {
     }
     
     var body: some View {
+                
         if let image = UIImage(data: imageFetcher.data) {
-            return AnyView(
-                Image(uiImage: image)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(height: 400)
+            return AnyView(                
+                    Image(uiImage: image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 225, alignment: Alignment.topLeading)
+                    .clipped()
             )
         } else {
             return AnyView(
                 ActivityIndicator(style: .medium)
             )
+        
         }
+        
     }
 }
 
