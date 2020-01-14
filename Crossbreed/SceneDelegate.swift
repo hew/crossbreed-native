@@ -29,6 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 ContentView()
                     .environmentObject(searchState)
                     .environmentObject(persistedState)
+                    .environment(\.colorScheme, .dark)
             )
             self.window = window
             window.makeKeyAndVisible()

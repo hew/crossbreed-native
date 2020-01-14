@@ -21,7 +21,7 @@ struct ActivityIndicator: UIViewRepresentable {
     }
 }
 
-struct LoadableImage: View {
+struct ResultsImage: View {
     @ObservedObject var imageFetcher: ImageFetcher
     
     init(with urlString: String) {
@@ -31,7 +31,33 @@ struct LoadableImage: View {
     var body: some View {
         if let image = UIImage(data: imageFetcher.data) {
             return AnyView(
-                Image(uiImage: image).resizable()
+                Image(uiImage: image)
+                    .resizable()
+                    .frame(width: 60, height: 60)
+                    .border(Color("secondary"))
+            )
+        } else {
+            return AnyView(
+                ActivityIndicator(style: .medium)
+            )
+        }
+    }
+}
+
+struct DetailsImage: View {
+    @ObservedObject var imageFetcher: ImageFetcher
+    
+    init(with urlString: String) {
+        imageFetcher = ImageFetcher(url: urlString)
+    }
+    
+    var body: some View {
+        if let image = UIImage(data: imageFetcher.data) {
+            return AnyView(
+                Image(uiImage: image)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 400)
             )
         } else {
             return AnyView(
@@ -83,7 +109,6 @@ struct GradientText: View {
 
 struct SearchField : View {
     @EnvironmentObject var searchState: SearchState
-//    @State var query = ""
     
     var placeholder: String
     
@@ -95,8 +120,8 @@ struct SearchField : View {
             })                
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .padding(.horizontal, 20)
-            .zIndex(1)
-        }        
+            .zIndex(1)            
+        }
     }
 }
 

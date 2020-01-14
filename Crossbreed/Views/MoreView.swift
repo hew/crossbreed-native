@@ -15,14 +15,14 @@ struct MoreView: View {
     
     var body: some View {
         VStack {
-            Text("About")
-            .font(AppFont.title)
-            .padding()
-            .padding(.top)
-            Text("Crossbreed was designed and built in Vancouver, BC.")
-                .font(AppFont.body)
-                .padding()
-                .padding(.top)
+//            Text("About")
+//            .font(AppFont.title)
+//            .padding()
+//            .padding(.top)
+//            Text("Crossbreed was designed and built in Vancouver, BC.")
+//                .font(AppFont.body)
+//                .padding()
+//                .padding(.top)
             Text("Legal")
                 .font(AppFont.title)
                 .padding()
@@ -33,7 +33,8 @@ struct MoreView: View {
                 Text("View Privacy Policy")
             }
             .padding()
-            .foregroundColor(Color("primary"))
+            .foregroundColor(Color("secondary"))
+            .font(AppFont.body)
             Spacer()
                 .navigationBarTitle("More", displayMode: .inline)
         }
@@ -45,8 +46,8 @@ struct MoreView: View {
                         self.isShowing = false
                     }) {
                         Image(systemName: "xmark")
-                            .font(.system(.subheadline))
-                            .foregroundColor(Color("primary"))
+                            .font(.system(.headline))
+                            .foregroundColor(Color("secondary"))
                     }
                 }
                 .padding()

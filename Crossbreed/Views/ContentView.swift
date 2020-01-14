@@ -28,7 +28,6 @@ struct ContentView : View {
                 nc.navigationBar.tintColor = UIColor.white
             })
         }
-//        .accentColor(Color("primary"))
         .navigationViewStyle(StackNavigationViewStyle())
     }
     

@@ -10,6 +10,7 @@ import SwiftUI
 import Combine
 
 struct HomeView : View {
+    @ObservedObject private var keyboard = KeyboardResponder()
     @EnvironmentObject var searchState: SearchState
     @State var shouldNavigate = false
     @State private var showingAlert = false
@@ -25,6 +26,7 @@ struct HomeView : View {
                 .foregroundColor(Color.white)
                 .padding()
             Spacer()
+            VStack {
             SearchField(placeholder: "Search Strain")
             GradientButton(onPress: {
                 if self.searchState.searchString.count <= 1 {
@@ -36,7 +38,11 @@ struct HomeView : View {
             }, buttonText: "Search Now")
             NavigationLink(destination: FetchView(), isActive: self.$shouldNavigate) {
                 EmptyView()
+                }
+                
             }
+            .padding(.bottom, keyboard.currentHeight)
+            .animation(.easeOut(duration: 0.16))
             Spacer()
         }
         .background(Color("secondary"))
